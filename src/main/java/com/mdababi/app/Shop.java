@@ -4,10 +4,7 @@ import com.mdababi.data.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class Shop {
@@ -17,16 +14,8 @@ public class Shop {
 
         Product p1 = pm.createProduct(101, "Tea", BigDecimal.valueOf(1.99), Rating.NOT_RATED);
         //pm.printProductReport(101);
-        pm.parseReview("101,2,Nice hot cup of tea");
-        pm.parseReview("101,4,Nice hot cup of tea");
-        pm.parseReview("101,4,Nice hot cup of tea");
-        pm.parseReview("101,4,Nice hot cup of tea");
-        pm.parseReview("101,5,Nice hot cup of tea");
-        pm.parseReview("101,3,Nice hot cup of tea");
 
-        pm.printProductReport(101);
-
-        /*p1 = pm.reviewProduct(p1, Rating.FOUR_STAR, "Nice cup of Tea");
+        p1 = pm.reviewProduct(p1, Rating.FOUR_STAR, "Nice cup of Tea");
         p1 = pm.reviewProduct(p1, Rating.TWO_STAR, "Weak Tea");
         p1 = pm.reviewProduct(p1, Rating.FOUR_STAR, "Fine Tea");
         p1 = pm.reviewProduct(p1, Rating.FOUR_STAR, "Good Tea");
@@ -66,6 +55,8 @@ public class Shop {
         pm.printProducts((pr1, pr2) -> pr2.getRating().ordinal() - pr1.getRating().ordinal(), p -> p.getRating().ordinal() > 2);
         pm.printProducts(Comparator.comparing(Product::getPrice).reversed(), p -> p.getRating().ordinal() > 2);
 
-        System.out.println(pm.getDiscounts());*/
+        System.out.println(pm.getDiscounts());
+
+
     }
 }
