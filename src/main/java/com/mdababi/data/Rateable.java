@@ -18,5 +18,4 @@ public interface Rateable<T> {
         return applyRating( convert(stars));
     }
 
-
 }

@@ -6,6 +6,7 @@ import lombok.Getter;
 public class Review implements Comparable<Review>{
     private Rating rating;
     private String comment;
+    int test;
 
     public Review(Rating rating, String comment) {
         this.rating = rating;
